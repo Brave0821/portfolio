@@ -1,0 +1,138 @@
+/* 글자 색 변경  */
+/* h1 {
+    font-weight: 800; font-size: 5rem;
+    background: linear-gradient(to right, darkgreen, white, black,darkgreen);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-size:400%;
+    animation: text_bg 10s linear infinite;
+}
+@keyframes text_bg{
+    0%{background-position-x:100%;}
+    100%{background-position-x:400%;}
+} */
+
+/* 첫장 대문 페이지  */
+.start_wrap {
+    background: #616161;
+    height: 100vh; width: 100vw;
+    text-align: center;
+    padding: 25% 0 0 0;
+/*     background:url(../images/annie-spratt-NrflUuJJK0I-unsplash.jpg) */
+ /* 비디오나 이미지 넣기 */
+}
+.start_wrap p {color: #fff;}
+.start_wrap h1 { color:#fff;
+    font-size: 3rem;
+    line-height: 1.7;}
+.start_wrap .info {}
+
+
+.wrap {
+    background-color: #2e8b57;
+    width: 100vw; height: 100vh;
+    text-align: center; padding: 5% 0 0 0; 
+}
+.wrap p {
+    color: #fff;
+    font-weight: bold;
+    padding: -105% 0 0 0;
+}
+.wrap h1 {
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.7;
+    font-weight: bold;
+}
+.wrap .info {}
+/* 첫장 대문 페이지  */
+/* 본격적인 해더  */
+.wrap #top {
+    max-width: 1150px;
+}
+.wrap #top nav {} /* 페이지 메뉴바 */
+.wrap #top nav h1 {
+    margin-top: 0; padding-top: 1em;
+    font-weight: bold;
+}
+.wrap #top p {
+    margin-top: 0; padding-top: 1em;
+    font-weight: bold;
+    font-size: 30px;
+    padding-bottom: 40px;
+}
+.wrap #top nav .page_nav {} /* ul */
+.wrap #top nav .page_nav li{
+    box-shadow: inset 0 -1px 5px;
+    background: #fff; margin-top: 30px;
+    padding-top:30px ; padding-bottom: 30px;
+    border-radius: 20px;  
+
+}
+.wrap #top nav .page_nav li a{
+
+    color:  #2e8b57;
+    font-weight: bold;
+    display: block;
+}
+/* nav 목록 */
+
+.wrap #top .my_header {
+    display: flex;
+    justify-content: space-around
+}
+.wrap #top .my_header .my_picture_left {
+
+}
+.wrap #top .my_header .my_picture_left img {
+    width: 40px;
+    text-align: left;
+}
+
+.wrap #top .my_header .my_picture_right {
+
+}
+
+.wrap #top .my_header .my_picture_right p {
+
+}
+
+.wrap #top .top_banner {} /* 해더 쪽 나의 이미지  */
+.wrap #top .top_banner .my_picture {
+    width: 200px;
+	height: 200px;
+	border-radius: 10%;
+    background: silver;
+}
+.wrap #top .top_banner .my_picture .my_pic {}/* 이미지 */
+.wrap #top .top_banner .my_about {
+    max-width: 65%;
+	margin: 0 auto;
+	line-height: 1.4;
+	padding:2em 1.5em;
+	color: #616161;
+	font-size: 1em;
+	letter-spacing: 1px;
+} /* 설명 */
+.wrap #top .top_banner .my_about p {} /* 설명 글 내용 */
+.wrap #top .top_banner .my_about .my_skill{
+
+} /* 사용가능한 스킬  */
+.wrap #top .top_banner .my_about .my_skill p {} /* 사용가능한 스킬  */
+.wrap #top .top_banner .my_about .my_skill img {
+    width: 40px;
+} /* 사용가능한 스킬  */
+
+/* main */
+.wrap .my_main {}
+.wrap .my_main .main_wrap {}
+.wrap .my_main .main_wrap .main_container {}
+.wrap .my_main .main_wrap .main_container  .main_title{} /* 메인페이지 타이틀 */
+.wrap .my_main .main_wrap .main_container  .my_icon {
+    display: flex;
+} 
+.wrap .my_main .main_wrap .main_container  .my_icon a {
+    font-size: 90px;
+} /* 아이콘 줄 거면 추가하기  */
+
+.wrap .my_main .main_wrap .main_container.my_introduction{} /* 포트폴리오 소개 페이지 */
