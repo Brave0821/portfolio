@@ -1,0 +1,32 @@
+/* 글자 색 변경  */
+/* h1 {
+    font-weight: 800; font-size: 5rem;
+    background: linear-gradient(to right, darkgreen, white, black,darkgreen);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-size:400%;
+    animation: text_bg 10s linear infinite;
+}
+@keyframes text_bg{
+    0%{background-position-x:100%;}
+    100%{background-position-x:400%;}
+} */
+
+/* 첫장 대문 페이지  */
+.start_wrap {
+    background: #666666;
+    height: 100vh; width: 100vw;
+    text-align: center;
+    padding: 25% 0 0 0;
+/*     background:url(../images/annie-spratt-NrflUuJJK0I-unsplash.jpg) */
+ /* 비디오나 이미지 넣기 */
+}
+.start_wrap p {color: #fff;}
+.start_wrap h1 { color:#fff;
+    font-size: 3rem;
+    line-height: 1.7;}
+.start_wrap .info {}
+
+/* 첫장  */
+
+
