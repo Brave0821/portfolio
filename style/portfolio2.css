@@ -1,23 +1,14 @@
-/* 글자 색 변경  */
-/* h1 {
-    font-weight: 800; font-size: 5rem;
-    background: linear-gradient(to right, darkgreen, white, black,darkgreen);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-size:400%;
-    animation: text_bg 10s linear infinite;
-}
-@keyframes text_bg{
-    0%{background-position-x:100%;}
-    100%{background-position-x:400%;}
-} */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 
-/* 첫장 대문 페이지  */
-.start_wrap {
-    background: #666666;
-    height: 100vh; width: 100vw;
+  .start_wrap {
+    background: #000;
+    height: 70vh; width: 100vw;
     text-align: center;
-    padding: 25% 0 0 0;
+    padding: 15% 0 0 0;
 /*     background:url(../images/annie-spratt-NrflUuJJK0I-unsplash.jpg) */
  /* 비디오나 이미지 넣기 */
 }
@@ -27,6 +18,89 @@
     line-height: 1.7;}
 .start_wrap .info {}
 
-/* 첫장  */
 
 
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 35px;
+    /* 회색 박스 간격 밑으로 ㅇㅇ */
+    text-align: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  section {
+    padding: 40px;
+  }
+  
+  section h2 {
+    font-weight: bold;
+    font-size: 25px;
+    color: #333;
+    border-bottom: 1px solid #000;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  main #about img {
+    width: 20%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+main #about p {
+    font-weight: bold;
+  /*   font-size: 20px; */
+}
+  main #projects ul li img {width: 500px;}
+  main #my_skills ul li {font-size: 20px;}
+
+  main #my_skills ul li img{width: 2.5%;
+    margin-right: 5px;
+}
+
+header h1 {font-size: 40px;}
+
+header nav li {margin-right: 27px;}
+
+
+ /* 각 섹션이 스크롤될 때 페이드인 효과 적용 */
+ @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 각 섹션에 애니메이션 적용 */
+  .start_wrap {
+    animation: fadeIn 1s ease 0.5s both;
+  }
+
+/*   header {
+    animation: fadeIn 1s ease 1s both;
+  } */
