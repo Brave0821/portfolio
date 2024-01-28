@@ -1,93 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="2024년 프론트엔드 신입 김용기 포트폴리오입니다.">
-    <meta name="viewport" content="">
-    <meta name="keywords" content="">
-    <title>김용기 포트폴리오</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style/reset.css">
-    <link rel="stylesheet" href="./style/portfolio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>2024 Portfolio</title>
+    <link rel="stylesheet" href="./style/test.css">
 </head>
-
 <body>
     <div class="start_wrap">
         <p>2024 Portfolio</p>
-            <h1>프론트엔드 포트폴리오</h1>
-            <p class="info">
-                어서오세요
-            </p>
+        <h1>프론트엔드 포트폴리오</h1>
+        <p class="info">
+            어서오세요
+        </p>
     </div>
-    <div class="wrap">
-        <header id="top">
-            <!-- <h1>2024 Portfolio</h1> -->
-            <p>프론트엔드 포트폴리오</p>
-            <div class="my_header">
-            <div class="my_picture_left">
-                <!-- 이미지 선택 시 작업 소개 단락으로 이동-->
-                <img src="" alt="#" class="my_pic"><a href="#"></a></img>
-            </div>
-            <div class="my_picture_right">
-                <!-- 이미지 선택 시 작업 소개 단락으로 이동-->
-                <p>프론트엔드 주니어 개발자 ~~ㅇㅁㄴㅇㄴㅁㅇㅁㄴㅇㄴㅁㅇ;ㅣㅁㄴㅇㄴㅁ;ㅇ;ㅁㄴ </p>
-            </div>
-        </div>
-            <nav>
-                <ul class="page_nav">
-                    <!-- a안에 각 페이제 h1한테 id 줘서 a링크에 걸면 이동이 가능하다. 
-            https://codepen.io/Aakash-dev/pen/Yvqwdr?editors=1000
-            nav 방식 말고도 https://codepen.io/electronicdreamplant/pen/BQXgdE
-            아래로 내리는 다운 화살표 방식도 있음. fa fa-chevron-down             
-        -->
-                    <li><a href="#top_info">Home</a></li> <!-- top는 자기소개 및 nav바 -->
-                    <li><a href="#main_portfolio">Portfolio</a></li> <!-- main은 포트폴리오 소개 및 기술 -->
-                    <li><a href="#footer_info">info</a></li> <!-- footer는 개인정보 번호 주소 이메일  등등  -->
-                    <!-- <li><a href="#"></a></li> --> <!-- 작업하면서 페이지 항목 세분화 할거면 추가.  -->
-                </ul>
-            </nav>
-            <div class="top_banner">
-               <!-- 원래 사진 있던 자리 -->
-                <div class="my_about">
-                    <p>대략적인 한 줄 자기소개 멘트</p>
-                    <div class="my_skill">
-                        <p>사용가능 기술</p>
-                        <!-- 기술 아이콘을 넣어두고 클릭 시 다른 페이지에 해당 작업물?로 이동 -->
-                        <img src="./images/skill_icon/html_2.png" alt=""><a href="#"></a></img>
-                        <img src="./images/skill_icon/css2.png" alt=""><a href="#"></a></img>
-                        <img src="./images/skill_icon/js2.png" alt=""><a href="#"></a></img>
-                        <img src="./images/skill_icon/github1.png" alt=""><a href="#"></a></img>
-                        <img src="./images/skill_icon/react.svg" alt=""><a href="#"></a></img>
-                        <img src="./images/skill_icon/figma1.png" alt=""><a href="#"></a></img>
-                        <img src="#" alt=""><a href="#"></a></img>
-                        <img src="#" alt=""><a href="#"></a></img>
-                        <img src="#" alt=""><a href="#"></a></img>
-                        <img src="#" alt=""><a href="#"></a></img>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <main class="my_main"> 
-            <!-- 애한테  css로 background: url('https://i.ibb.co/XCd18Rr/cover2.jpg'); 주기 -->
-            <div class="main_wrap">
-                <div class="main_container">
-                    <p class="main_title">Front-End Developer</p>
-                    <div class="my_icon">
-                        <!-- 아이콘을  -->
-                        <a target="my_black" href="https://github.com/Brave0821"><i class="fa-brands fa-github"></i></a>
-                        <!-- 아이콘 줄 거면 a target 추가하기. -->
-                        <p>dddd dasd adasfasfdsfdsfdsf</p>
-                    </div>
-                    <div class="my_introduction"> <!-- 포트폴리오 소개 페이지 -->
-
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-    <script src="./script/script.js"></script>
+    <header>
+        <h1>My_2024 Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">소개</a></li>
+                <li><a href="#my_skills">기술능력</a></li>
+                <li><a href="#projects">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>안녕하세요 <br>Brave의 프로폴리오 페이지입니다.</h2>
+            <img src="./images/my_img1.webp" alt="">
+            <p>프론트엔드 개발자를 목표로하는 주니어 개발자입니다.</p>
+        </section>
+        <hr>
+        <section id="my_skills">
+            <h2>기술능력</h2>
+            <ul>
+                <li><img src="./images/html_img1.png" alt="">HTML5</li>
+                <li><img src="#" alt="">CSS3</li>
+                <li><img src="#" alt="">JavaScript</li>
+                <li><img src="#" alt="">추가하기</li>
+            </ul>
+        </section>
+        <hr>
+        <section id="projects">
+            <h2>진행한 프로젝트</h2>
+            <ul>
+                <li>
+                    <img src="./images/my_port1.png" alt="">
+                    <p>국립현대미술관 프로젝트</p>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <p>프로젝트2</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
-<!-- 기술 스택에 아이콘 클릭 시 어떤 작업 및 공부를 했는지? 소개 페이지로 이동 html 하나 더 만들어야할듯? -->
