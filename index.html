@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>2024 Portfolio</title>
+    <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/portfolio2.css">
 </head>
 <body>
@@ -55,6 +55,24 @@
                 </li>
             </ul>
         </section>
+        <div class="mail">
+            <h1>메일 api</h1>
+            <form action="https://api.web3forms.com/submit" method="POST">
+
+                <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
+                <!-- https://web3forms.com/#start  받은 키를 저기에 입력 -->
+                <input type="hidden" name="access_key" value="86501c66-6d05-4bf1-900e-39610a4f84cd">
+            
+                <input type="text" name="name" required>
+                <input type="email" name="email" required>
+                <textarea name="message" required></textarea>
+                <div class="h-captcha" data-captcha="true"></div>
+                <button type="submit">Submit Form</button>
+            
+            </form>
+            
+            <script src="https://web3forms.com/client/script.js" async defer></script>
+        </div>
     </main>
     <script src="scripts.js"></script>
 </body>
