@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
   }
-
   .start_wrap {
     background: #000;
     height: 70vh; width: 100vw;
@@ -48,6 +47,13 @@ body {
   
   section {
     padding: 40px;
+  }
+  section ul{
+    display: flex;
+    margin-top: 20px;
+  }
+  section ul li {
+    padding: 0px 10px 0px 0px;
   }
   
   section h2 {
