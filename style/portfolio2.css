@@ -4,8 +4,8 @@ body {
     padding: 0;
   }
   .start_wrap {
-    background: #000;
-    height: 70vh; width: 100vw;
+    background-image: url(/images/green.jpg);
+    height: 100vh; width: 100vw;
     text-align: center;
     padding: 15% 0 0 0;
 /*     background:url(../images/annie-spratt-NrflUuJJK0I-unsplash.jpg) */
@@ -17,14 +17,33 @@ body {
     line-height: 1.7;}
 .start_wrap .info {}
 
+.main_wrap {
+  background: #FAFAFA;
+  /* background: #F5F5F5; */
+}
+
+.swiper-container {
+  position: relative;
+}
+
+.swiper-button-prev {
+  position: absolute;
+} 
+.swiper-button-next {
+  position: absolute;
+} 
 
 
   header {
-    background-color: #333;
+    background-color:  #B1E6D1;
     color: #fff;
     padding: 35px;
-    /* 회색 박스 간격 밑으로 ㅇㅇ */
     text-align: center;
+  }
+
+  nav ul li a {
+    font-size: 27px;
+    font-weight: bold;
   }
   
   nav ul {
@@ -42,11 +61,14 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 23px;
   }
   
+  /* 진행한 프로젝트까지  */
   section {
-    padding: 40px;
+    /* padding: 40px; */
+    padding: 0 40px;
+
   }
   section ul{
     display: flex;
@@ -54,15 +76,21 @@ body {
   }
   section ul li {
     padding: 0px 10px 0px 0px;
+    display: contents;
   }
-  
+  /* 기술능력 */
   section h2 {
     font-weight: bold;
     font-size: 25px;
-    color: #333;
     border-bottom: 1px solid #000;
+    padding-bottom: 20px;
   }
-  
+
+  /* 진행한 프로젝트 */
+  #projects {
+    
+  }
+
   img {
     max-width: 100%;
     height: auto;
@@ -74,22 +102,101 @@ body {
     margin-bottom: 20px;
 }
 
+main #about h2 {
+  padding-bottom: 30px;
+  font-size: 27px;
+}
+
 main #about p {
     font-weight: bold;
   /*   font-size: 20px; */
 }
-  main #projects ul li img {width: 500px;}
-  main #my_skills ul li {font-size: 20px;}
+main #my_skills { 
+  margin: 20px 0px 20px 0px;
 
-  main #my_skills ul li img{width: 2.5%;
+}
+/* 진행한 프로젝트에 사진 센터 0229 */
+main #projects .swiper-wrapper {
+  text-align: center;
+}
+  /* 이미지 */
+  main #projects .swiper-wrapper .swiper-slide img {width: 200px; height: 187px;
+  }
+  main #projects .swiper-wrapper .swiper-slide {
+    width: 250px;
+    font-size: 20px;
+    padding: 0px 10px 0px 10px;
+  }
+  main #projects .swiper-wrapper p {
+    font-size: 20px;
+  }
+  main #my_skills .my_skills_ul {
+    text-align: center;
+  }
+  main #my_skills .my_skills_ul li img{width: 2.5%;
     margin-right: 5px;
 }
 
 header h1 {font-size: 40px;}
 
-header nav li {margin-right: 27px;}
+header nav li {margin-right: 27px;
+
+}
+
+.main_wrap {
+  margin: 0 auto;
+  max-width:100%;
+}
 
 
+.main_wrap .mail {
+  background: #B1E6D1;
+  padding: 0 40px;
+  margin-top: 30px;
+}
+.main_wrap .mail h1{
+  font-size: 25px;
+  padding: 20px 0px 20px 0px;
+  border-bottom:1px solid #000 ;
+
+}
+
+.main_wrap .mail form input {
+  /* display: flex; */
+  background: #fff;
+  width: 300px; height: 47px;
+  border-radius: 5px;
+  margin: 20px 0px 20px 0px;
+  display: block;
+  padding: 0px 0px 5px 10px;
+}
+
+.main_wrap .mail form textarea {
+  margin-bottom: 20px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 12px 0px 0px 10px;
+}
+.main_wrap .mail form button {
+background: #fff;
+width: 150px;
+height: 47px;
+margin-top: 20px;
+text-align: center;
+display: block;
+justify-content: center;
+border-radius: 5px;
+color: #a1a1a1;
+font-weight: bold;
+}
+.main_wrap .mail form .anchor{
+  border-radius: 5px;
+}
+/* 메일문의 사람입니다. 체크 박스 */
+.main_wrap .mail .h-captcha iframe {
+  background: #fff;
+  border-radius: 5px;
+}
  /* 각 섹션이 스크롤될 때 페이드인 효과 적용 */
  @keyframes fadeIn {
     from {
