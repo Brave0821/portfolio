@@ -82,6 +82,7 @@ main .main_wrap #about .profile {
   margin-bottom: 20px;
   display:flex;
 }
+
 main .main_wrap #about .profile .photo {
   width: 20%; margin: 40px 20px 30px 0;
 }
@@ -96,6 +97,11 @@ main .main_wrap #about .profile .info p {
   margin-top: 5px;
   line-height:1.7;
 }
+
+main .main_wrap #about .profile .info p:last-child {
+
+}
+
 main .main_wrap  #about .profile .info .addr_content {
   font-weight: bold;
   font-size: 20px;
@@ -108,6 +114,7 @@ main .main_wrap #my_skills {
   margin: 80px 0px 80px 0px;
 }
 main .main_wrap #my_skills h2 {}
+/* 111 */
 main .main_wrap #my_skills .my_skills_ul {
   display: flex;
   justify-content:center;
@@ -125,6 +132,11 @@ main .main_wrap #my_skills .my_skills_ul li {
 }
 main .main_wrap #my_skills .my_skills_ul li img {
   width: 50px; height: auto;
+  transition: transform 0.3s ease;
+}
+main .main_wrap #my_skills .my_skills_ul li img:hover{
+  transform: scale(1.1); 
+  transform-origin: 50% 50%;
 }
 main .main_wrap #my_skills .my_skills_ul li p {
   font-size: 16px; padding-top:10px;
@@ -251,3 +263,7 @@ footer .addr a .addr_content .addr_title {}
 .start_wrap {
   animation: fadeIn 1s ease 0.5s both;
 }
+
+
+/* 실험중 */
+

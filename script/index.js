@@ -37,6 +37,12 @@ mail_inquire.addEventListener("click",()=>{
     is_visible = !is_visible; //상태변경
 }); 
 
+/* 부트스트랩 툴팁 */
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
+
 /* 주소 */
 /* 기획 페이지 팝업으로 나오게 만들기  */
 
