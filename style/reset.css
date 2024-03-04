@@ -8,12 +8,17 @@ table,tr,td,th,thead,tbody,tfoot,
 form,fieldset,legend,input,select,option,button,label,textarea,
 header,main,footer,nav,section,article,figcaption,figure,aside,
 address,details,mark,time,video,img,summary,iframe,div {
-    margin:0; padding:0;
-    font-size:1.0rem; font-style:normal; /* font-weight:normal; */
-   /*  font-weight:bold; */
-    line-height:1.2; color:#000; /* 1.2 - > 120% 같은 말 */
-    text-decoration:none; /* font-family: 'Noto Sans KR', sans-serif; */
-    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    margin:0;
+    padding:0;
+    font-size:1.0rem;
+    font-style:normal;
+    /* font-weight:normal; */
+    /*  font-weight:bold; */
+    line-height:1.2;
+    color:#000; /* 1.2 - > 120% 같은 말 */
+    text-decoration:none;
+    /* font-family: 'Noto Sans KR', sans-serif; */
+    /* font-family: 'Spoqa Han Sans Neo', 'sans-serif'; */
 }
 ul,ol,li {list-style:none;}
 button {cursor:pointer;} /* 커서를 포인터 모양으로 버튼에 마우스를 대면 손모양 */

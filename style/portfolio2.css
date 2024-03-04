@@ -3,12 +3,12 @@
 }
 /* intro 첫번째 영역 */
 .start_wrap {
-  background: url(../images/img1.jpg) center;
+  background:#f7f9fb url(../images/img1_2.jpg) no-repeat center;
   background-size:cover;
-  height: 130vh;
+  height: 100vh;
   width: 100vw;
   text-align: center;
-  padding: 15% 0 0 0;
+  padding: 18.4% 0 0 0;
 }
 .start_wrap p {
   color: #a1a1a1;
@@ -20,24 +20,19 @@
   font-weight: bold;
 }
 .start_wrap h1 {
-  color: #a1a1a1;
-  font-size: 3rem;
+  color: #87A922;
+  font-size: 5rem;
   line-height: 1.7;
   font-weight: bold;
 }
 .start_wrap .info {
   margin-bottom: 20px;
+  color:#114232;
+  font-size:2rem;
 }
-.start_wrap .start_down {
-  color: #a1a1a1;
-  font-weight: bold;
-}
-/* 마우스를 올렸을 때의 네비게이션 바 링크 색상 */
-.start_wrap .start_down:hover {color: darkgreen;}
-
 /* header */
 header {
-  background-color: #B1E6D1;
+  background-color: #114232;
   color: #fff;
   padding: 35px;
   text-align: center;
@@ -75,31 +70,40 @@ main .main_wrap > section h2 {
   padding-bottom: 20px;
 }
 /* section 개별 이름 about > my_skills > project(swiper-container) 순서 */
-main .main_wrap #about {}
+main .main_wrap #about {
+  padding-top:40px;
+}
 main .main_wrap #about h2 {
   padding-bottom: 30px;
   font-size: 27px;
 }
-main .main_wrap #about .main_title {
+main .main_wrap #about .profile {
   font-size: 25px;
   margin-bottom: 20px;
+  display:flex;
 }
-main .main_wrap #about > img {
-  width: 20%;
-  margin-top: 40px;
-  margin-bottom: 30px;
+main .main_wrap #about .profile .photo {
+  width: 20%; margin: 40px 20px 30px 0;
 }
-
-main .main_wrap #about > p {
+main .main_wrap #about .profile .photo img {width:100%;}
+main .main_wrap #about .profile .info {
+  padding-top: 28px;
+}
+main .main_wrap #about .profile .info .main_title {}
+main .main_wrap #about .profile .info p {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+  line-height:1.7;
+}
+main .main_wrap  #about .profile .info .addr_content {
   font-weight: bold;
   font-size: 20px;
   margin-top: 5px;
 }
-main .main_wrap  #about  .addr_content {
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: 5px;
-}
+main .main_wrap #about .profile .info .addr_content .addr_title {}
+main .main_wrap #about .profile .info a {}
+main .main_wrap #about .profile .info a .addr_content {}
 main .main_wrap #my_skills {
   margin: 80px 0px 80px 0px;
 }
@@ -111,20 +115,19 @@ main .main_wrap #my_skills .my_skills_ul {
   text-align: center;
 }
 main .main_wrap #my_skills .my_skills_ul li {
-  display: contents; 
-  padding: 10px; 
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
   margin: 0 10px;
 }
 main .main_wrap #my_skills .my_skills_ul li img {
-  width: 30px;
-  height: auto;
-  margin-right: 5px;
+  width: 50px; height: auto;
 }
 main .main_wrap #my_skills .my_skills_ul li p {
-  font-size: 25px;
-  margin-top: 10px;
-  margin-right: 35px;
-  font-weight: bold;
+  font-size: 16px; padding-top:10px;
 }
 main .main_wrap #projects {
   position: relative;
@@ -139,15 +142,31 @@ main .main_wrap #projects .swiper-wrapper .swiper-slide {
   padding: 20px 10px 20px 10px;
 }
 /* 이미지 클릭 시 포트폴리오 새 창 링크 */
-main .main_wrap #projects .swiper-wrapper .swiper-slide a {}
-main .main_wrap #projects .swiper-wrapper .swiper-slide a img {
-  width: 400px; height: 198px;
+main .main_wrap #projects .swiper-wrapper .swiper-slide .photo {
+  border:2px solid #114232; display:inline-block;
+  width:100%; height:350px; overflow:hidden;
+  background:url(../images/project_Preparing800.png) center;
+  background-size:cover;
+}
+main .main_wrap #projects .swiper-wrapper .swiper-slide .photo:hover {
+  filter:brightness(110%)
+}
+main .main_wrap #projects .swiper-wrapper .swiper-slide .photo img {width:100%;}
+main .main_wrap #projects .swiper-wrapper .swiper-slide h3 {
+  font-size:1.5rem; padding-top:10px;
 }
 main .main_wrap #projects .swiper-wrapper .swiper-slide p {
-  font-size: 20px; font-weight: bold;
+  font-size: 20px; margin-top:10px;
 }
 /* 기획페이지 새 창 링크 */
-main .main_wrap #projects .swiper-wrapper .swiper-slide p+a {}
+main .main_wrap #projects .swiper-wrapper .swiper-slide .view {
+  margin-top:20px;
+  background:#87A922; border-radius:2px;
+  padding:10px 20px; display:inline-block; color:#fff;
+}
+main .main_wrap #projects .swiper-wrapper .swiper-slide .view:hover {
+  background:#114232;
+}
 /* prev, next */
 main .main_wrap #projects .swiper-button-prev {
   position: absolute; color: #000;
@@ -159,28 +178,31 @@ main .main_wrap #projects .swiper-button-prev:hover {color: darkgreen;}
 main .main_wrap #projects .swiper-button-next:hover{color: darkgreen;}
 /* footer */
 footer {
-  background: #B1E6D1;
+  background: #114232;
   display: flex;
   padding: 0px 30px 0px 30px;
 }
 footer .mail {
-  padding: 0 40px; margin-top: 30px;
+  padding: 0 40px;
+  margin-top: 30px;
+  width: 1200px;
+  margin: 0 auto;
 }
 footer .mail a {}
 footer .mail a h1 {
-  font-size: 25px;
+  font-size: 25px; color:#fff;
   padding: 20px 0px 20px 0px;
-  border-bottom: 1px solid #000;
 }
 footer .mail a img {
   padding-left: 5px;
   width: 25px;
   height: 25px;
 }
-footer .mail #mailFrm {display: none;}
+footer .mail #mailFrm {
+}
 footer .mail #mailFrm input {
   background: #fff;
-  width: 300px;
+  width: 100%;
   height: 47px;
   border-radius: 5px;
   margin: 20px 0px 20px 0px;
@@ -191,12 +213,13 @@ footer .mail #mailFrm input[type=text] {}
 footer .mail #mailFrm input[type=email] {}
 footer .mail #mailFrm textarea {
   margin-bottom: 20px;
-  width: 300px;
+  width: 100%; height:200px;
   border-radius: 5px;
   padding: 12px 0px 0px 10px;
 }
 footer .mail #mailFrm #sendbtn {
-  color: #000; margin-top: 20px;
+  color: #605f67;
+  background:#fff; width:50%;
 }
 footer .addr {margin-left: 70px;}
 footer .addr h1 {
