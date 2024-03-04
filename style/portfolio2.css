@@ -1,281 +1,168 @@
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
+/* intro 첫번째 영역 */
 .start_wrap {
-  background-image: url(/images/green.jpg);
-  /*     background-size: 100% 100%; */
+  background: url(../images/img1.jpg) center;
+  background-size:cover;
   height: 130vh;
   width: 100vw;
   text-align: center;
   padding: 15% 0 0 0;
-  /*     background:url(../images/annie-spratt-NrflUuJJK0I-unsplash.jpg) */
-  /* 비디오나 이미지 넣기 */
 }
-
-main #my_skills .my_skills_ul li img {
-  width: 30px;
-  height: auto;
-  margin-right: 5px;
-}
-
-
 .start_wrap p {
-  color: #fff;
+  color: #a1a1a1;
   font-size: 20px;
   font-weight: bold;
 }
-
-.start_wrap h1 {
-  color: #fff;
-  font-size: 3rem;
-  line-height: 1.7;
-  font-weight: bold;
-}
-
 .start_wrap .year_title {
   font-size: 25px;
   font-weight: bold;
 }
-
+.start_wrap h1 {
+  color: #a1a1a1;
+  font-size: 3rem;
+  line-height: 1.7;
+  font-weight: bold;
+}
 .start_wrap .info {
   margin-bottom: 20px;
 }
-
-.main_wrap {
-  background: #FAFAFA;
-  /* background: #F5F5F5; */
+.start_wrap .start_down {
+  color: #a1a1a1;
+  font-weight: bold;
 }
+/* 마우스를 올렸을 때의 네비게이션 바 링크 색상 */
+.start_wrap .start_down:hover {color: darkgreen;}
 
-.swiper-container {
-  position: relative;
-}
-
-.swiper-button-prev {
-  position: absolute;
-  color: #000;
-}
-
-.swiper-button-prev:hover {
-  color: darkgreen;
-}
-
-.swiper-button-next {
-  position: absolute;
-  color: #000;
-}
-
-.swiper-button-next:hover{
-  color: darkgreen;
-}
-
-
+/* header */
 header {
   background-color: #B1E6D1;
   color: #fff;
   padding: 35px;
   text-align: center;
 }
-
-nav ul li a {
-  font-size: 27px;
-  font-weight: bold;
-  padding: 0px 30px;
-}
-
-/* 마우스를 올렸을 때의 네비게이션 바 링크 색상 */
-nav ul li a:hover {
-  color: darkgreen
-  /* 여기에 원하는 색상을 지정하세요 */
-}
-
-.start_wrap .start_down:hover {
-  color: darkgreen;
-
-}
-/* 내리기 */
-.start_wrap .start_down {
-  color: #fff;
-  font-weight: bold;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
+header nav {}
+header nav ul {
   display: flex;
   justify-content: center;
 }
 /* 소개 기술능력 */
-nav ul li {
-  margin-right: 20px;
-}
-
-nav a {
+header nav ul li {margin-right: 27px;}
+header nav ul li a {
+  font-size: 27px;
+  font-weight: bold;
+  padding: 0px 30px;
   color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 23px;
 }
-
-/* 진행한 프로젝트까지  */
-section {
-  /* padding: 40px; */
+nav ul li a:hover {color: darkgreen}
+/* main 프로필 페이지 */
+main {}
+main .main_wrap {
+  margin: 0 auto;
+  max-width: 100%;
+  background: #FAFAFA;
+}
+/* 공통 section */
+main .main_wrap > section {
   padding: 0 60px;
-
 }
-
-#my_skills .my_skills_ul {
-  display: flex;
-  justify-content:start; /* 가로 방향 가운데 정렬 */
-  margin-top: 30px;
-}
-/* 111 */
-#my_skills .my_skills_ul li {
-  display: contents; 
-  padding: 10px; 
-  margin: 0 10px; 
-}
-
-#my_skills .my_skills_ul li img {
-  width: 10px;
-  margin-right: 10px; 
-}
-
-
-#my_skills .my_skills_ul li p {
-  font-size: 16px; /* 텍스트 크기 조정 */
-  margin-top: 10px;
-  margin-right: 35px;
-  font-weight: bold;
-}
-
-/* 기술능력 */
-section h2 {
+main .main_wrap > section h2 {
   font-weight: bold;
   font-size: 25px;
   border-bottom: 1px solid #000;
   padding-bottom: 20px;
 }
-
-/* 진행한 프로젝트 */
-#projects {}
-
-img {
-  max-width: 100%;
-  height: auto;
+/* section 개별 이름 about > my_skills > project(swiper-container) 순서 */
+main .main_wrap #about {}
+main .main_wrap #about h2 {
+  padding-bottom: 30px;
+  font-size: 27px;
 }
-
-main #about img {
+main .main_wrap #about > img {
   width: 20%;
   margin-top: 40px;
   margin-bottom: 30px;
 }
-
-main #about h2 {
-  padding-bottom: 30px;
-  font-size: 27px;
-}
-
-main #about p {
+main .main_wrap #about > p {
   font-weight: bold;
-  /*   font-size: 20px; */
 }
-
-main #my_skills {
+main .main_wrap #my_skills {
   margin: 100px 0px 100px 0px;
-
 }
-
-/* 진행한 프로젝트에 사진 센터 0229 */
-main #projects .swiper-wrapper {
+main .main_wrap #my_skills h2 {}
+main .main_wrap #my_skills .my_skills_ul {
+  display: flex;
+  justify-content:center;
+  margin-top: 30px;
+  text-align: center;
+}
+main .main_wrap #my_skills .my_skills_ul li {
+  display: contents; 
+  padding: 10px; 
+  margin: 0 10px; 
+}
+main .main_wrap #my_skills .my_skills_ul li img {
+  width: 30px;
+  height: auto;
+  margin-right: 5px;
+}
+main .main_wrap #my_skills .my_skills_ul li p {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-right: 35px;
+  font-weight: bold;
+}
+main .main_wrap #projects {
+  position: relative;
+}
+main .main_wrap #projects h2 {}
+main .main_wrap #projects .swiper-wrapper {
   text-align: center;
   padding: 30px 0px 30px 0px;
 }
-
-/* 이미지 */
-main #projects .swiper-wrapper .swiper-slide img {
-  width: 400px;
-  height: 198px;
-}
-
-main #projects .swiper-wrapper .swiper-slide {
-
+main .main_wrap #projects .swiper-wrapper .swiper-slide {
   font-size: 20px;
   padding: 0px 10px 0px 10px;
 }
-
-main #projects .swiper-wrapper p {
-  font-size: 20px;
-  font-weight: bold;
+/* 이미지 클릭 시 포트폴리오 새 창 링크 */
+main .main_wrap #projects .swiper-wrapper .swiper-slide a {}
+main .main_wrap #projects .swiper-wrapper .swiper-slide a img {
+  width: 400px; height: 198px;
 }
-
-main #my_skills .my_skills_ul {
-  text-align: center;
+main .main_wrap #projects .swiper-wrapper .swiper-slide p {
+  font-size: 20px; font-weight: bold;
 }
-
-main #my_skills .my_skills_ul li img {
-  width: 2.5%;
-  margin-right: 5px;
+/* 기획페이지 새 창 링크 */
+main .main_wrap #projects .swiper-wrapper .swiper-slide p+a {}
+/* prev, next */
+main .main_wrap #projects .swiper-button-prev {
+  position: absolute; color: #000;
 }
-
-header h1 {
-  font-size: 40px;
+main .main_wrap #projects .swiper-button-next {
+  position: absolute; color: #000;
 }
-
-header nav li {
-  margin-right: 27px;
-
-}
-
-.main_wrap {
-  margin: 0 auto;
-  max-width: 100%;
-}
-
+main .main_wrap #projects .swiper-button-prev:hover {color: darkgreen;}
+main .main_wrap #projects .swiper-button-next:hover{color: darkgreen;}
+/* footer */
 footer {
   background: #B1E6D1;
   display: flex;
   padding: 0px 30px 0px 30px;
 }
-
-.mail a img {
+footer .mail {
+  padding: 0 40px; margin-top: 30px;
+}
+footer .mail a {}
+footer .mail a h1 {
+  font-size: 25px;
+  padding: 20px 0px 20px 0px;
+  border-bottom: 1px solid #000;
+}
+footer .mail a img {
   padding-left: 5px;
   width: 25px;
   height: 25px;
 }
-
-.main_wrap .addr{
-  margin-left: 70px;
-}
-
-.addr h1 {
-  font-size: 25px;
-  padding: 50px 0px 20px 0px;
-  border-bottom: 1px solid #000;
-
-}
-
-.main_wrap .mail {
-
-  padding: 0 40px;
-  margin-top: 30px;
-}
-
-.main_wrap .mail h1 {
-  font-size: 25px;
-  padding: 20px 0px 20px 0px;
-  border-bottom: 1px solid #000;
-
-}
-
-.mail form {
-  display: none;
-}
-
-.main_wrap .mail form input {
-  /* display: flex; */
+footer .mail #mailFrm {display: none;}
+footer .mail #mailFrm input {
   background: #fff;
   width: 300px;
   height: 47px;
@@ -284,37 +171,29 @@ footer {
   display: block;
   padding: 0px 0px 5px 10px;
 }
-
-.main_wrap .mail form textarea {
+footer .mail #mailFrm input[type=text] {}
+footer .mail #mailFrm input[type=email] {}
+footer .mail #mailFrm textarea {
   margin-bottom: 20px;
   width: 300px;
   border-radius: 5px;
   padding: 12px 0px 0px 10px;
 }
-
-.main_wrap .mail form button {
-  /* background: #fff;
-width: 150px;
-height: 47px;
-text-align: center;
-display: block;
-justify-content: center;
-border-radius: 5px;
-font-weight: bold; */
-  color: #000;
-  margin-top: 20px;
+footer .mail #mailFrm #sendbtn {
+  color: #000; margin-top: 20px;
 }
-
-.main_wrap .mail form .anchor {
-  border-radius: 5px;
+footer .addr {margin-left: 70px;}
+footer .addr h1 {
+  font-size: 25px;
+  padding: 50px 0px 20px 0px;
+  border-bottom: 1px solid #000;
 }
-
-/* 메일문의 사람입니다. 체크 박스 */
-.main_wrap .mail .h-captcha iframe {
-  background: #fff;
-  border-radius: 5px;
-}
-
+footer .addr > .addr_content {}
+footer .addr > .addr_content .addr_title {}
+footer .addr a {}
+footer .addr a .addr_content {}
+footer .addr a .addr_content .addr_title {}
+/* --------------------------------------------- */
 /* 각 섹션이 스크롤될 때 페이드인 효과 적용 */
 @keyframes fadeIn {
   from {
@@ -327,12 +206,7 @@ font-weight: bold; */
     transform: translateY(0);
   }
 }
-
 /* 각 섹션에 애니메이션 적용 */
 .start_wrap {
   animation: fadeIn 1s ease 0.5s both;
 }
-
-/*   header {
-    animation: fadeIn 1s ease 1s both;
-  } */

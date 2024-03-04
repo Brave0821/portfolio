@@ -19,10 +19,8 @@
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/portfolio2.css">
 </head>
-
 <body>
     <div class="start_wrap">
-        <!--  <video src="./images/green_-_40724 (1440p).mp4"></video> -->
         <p class="year_title">2024 Portfolio</p>
         <h1>프론트엔드 포트폴리오 &#x1F33F;</h1>
         <p class="info">
@@ -45,6 +43,8 @@
                 <h2><br>&#x1F680; Brave의 프로폴리오 페이지입니다.</h2>
                 <img src="./images/my_img2.jpg" alt="">
                 <p>프론트엔드 개발자를 목표로하는 주니어 개발자입니다.</p>
+                <p>김용기</p>
+                <p></p>
             </section>
             <section id="my_skills">
                 <h2>&#x1F4BB; 기술능력</h2>
@@ -67,59 +67,48 @@
                 <h2>&#x1F4D6; 진행한 프로젝트</h2>
                 <ul class="swiper-wrapper">
                     <li class="swiper-slide">
-                        <a href="#"> <img src="./images/my_port1.png" alt="">
-                            <p>국립현대미술관 Project</p>
-                            <a href="#">프로젝트 기획링크</a>
-                        </a>
+                        <a href="#" target="_blank"><img src="./images/my_port1.png" alt=""></a>
+                        <p>국립현대미술관 Project</p>
+                        <a href="#" target="_blank">프로젝트 기획링크</a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="http://eunsung00.dothome.co.kr/#">
-                            <img src="./images/my_port2.png" alt="">
-                            <p>Team Project Wavve</p>
-                            <a href="https://www.figma.com/file/d97P1f5xxpEmgM6TqXLsxs/2%EC%A1%B0-Wavve-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?type=design&node-id=0-1&mode=design&t=nIeRIr4gu9Pj7AF2-0">프로젝트 기획링크</a>
-                        </a>
+                        <a href="http://eunsung00.dothome.co.kr/#" target="_blank"><img src="./images/my_port2.png" alt=""></a>
+                        <p>Team Project Wavve</p>
+                        <a href="https://www.figma.com/file/d97P1f5xxpEmgM6TqXLsxs/2%EC%A1%B0-Wavve-%ED%8C%80-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8?type=design&node-id=0-1&mode=design&t=nIeRIr4gu9Pj7AF2-0"  target="_blank">프로젝트 기획링크</a>
                     </li>
                     <li class="swiper-slide">
-                        <a href="#">
-                            <img src="./images/project_Preparing800.png" alt="">
-                            <p>프로젝트3</p>
-                        </a>
-                    </li>
-                    <li class="swiper-slide">
-                        <a href="#">
-                            <img src="./images/project_Preparing800.png" alt="">
-                            <p>프로젝트4</p>
-                        </a>
+                        <a href="#"  target="_blank"><img src="./images/project_Preparing800.png" alt=""></a>
+                        <p>준비중입니다</p>
                     </li>
                 </ul>
                 <!-- prev next 자리 -->
                 <a href="#" class="swiper-button-prev"></a>
                 <a href="#" class="swiper-button-next"></a>
             </section>
-            <footer>
-                <div class="mail">
-                    <a href="#"><h1>&#x1F4E9; 메일문의<img src="./images/icon/chevron-down-solid.svg" alt="">
-                    </h1></a>
-                    <form action="https://api.web3forms.com/submit" method="POST">
-                        <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
-                        <!-- https://web3forms.com/#start  받은 키를 저기에 입력 -->
-                        <input type="hidden" name="access_key" value="86501c66-6d05-4bf1-900e-39610a4f84cd">
-                        <input type="text" name="name" required placeholder="Name">
-                        <input type="email" name="email" required placeholder="email">
-                        <textarea name="message" required placeholder="Content"></textarea>
-                        <div class="h-captcha" data-captcha="true"></div>
-                        <button type="submit" class="btn btn-outline-light" data-bs-toggle="popover" title="Popover title" data-bs-content="메일을 보냈습니다.">보내기</button>
-                    </form>
-                    <script src="https://web3forms.com/client/script.js" async defer></script>
-                </div>
-                <div class="addr">
-                    <h1>주소</h1>
-                    <p class="addr_content"><em class="addr_title">email:</em>august8821@naver.com</p>
-                    <a href="https://github.com/"><p class="addr_content"><em class="addr_title"> &#x1F410; Git:</em>https://github.com/</p></a>
-                </div>
-            </footer>
         </div>
     </main>
+    <footer>
+        <div class="mail">
+            <a href="#"><h1>&#x1F4E9; 메일문의<img src="./images/icon/chevron-down-solid.svg" alt="">
+            </h1></a>
+            <form action="https://api.web3forms.com/submit" method="POST" id="mailFrm">
+                <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
+                <!-- https://web3forms.com/#start  받은 키를 저기에 입력 -->
+                <input type="hidden" name="access_key" value="86501c66-6d05-4bf1-900e-39610a4f84cd">
+                <input type="text" name="name" required placeholder="Name">
+                <input type="email" name="email" required placeholder="email">
+                <textarea name="message" required placeholder="Content"></textarea>
+                <div class="h-captcha" data-captcha="true"></div>
+                <button type="submit" id="sendbtn" class="btn btn-outline-light" data-bs-toggle="popover" title="Popover title" data-bs-content="메일을 보냈습니다.">보내기</button>
+            </form>
+            <script src="https://web3forms.com/client/script.js" async defer></script>
+        </div>
+        <div class="addr">
+            <h1>주소</h1>
+            <p class="addr_content"><em class="addr_title">email:</em>august8821@naver.com</p>
+            <a href="https://github.com/"><p class="addr_content"><em class="addr_title"> &#x1F410; Git:</em>https://github.com/</p></a>
+        </div>
+    </footer>
     <script src="script/index.js"></script>
 </body>
 
