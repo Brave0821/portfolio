@@ -1,3 +1,6 @@
+* {
+  font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+}
 /* intro 첫번째 영역 */
 .start_wrap {
   background: url(../images/img1.jpg) center;
@@ -64,6 +67,7 @@ main .main_wrap {
 main .main_wrap > section {
   padding: 0 60px;
 }
+
 main .main_wrap > section h2 {
   font-weight: bold;
   font-size: 25px;
@@ -76,28 +80,40 @@ main .main_wrap #about h2 {
   padding-bottom: 30px;
   font-size: 27px;
 }
+main .main_wrap #about .main_title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
 main .main_wrap #about > img {
   width: 20%;
   margin-top: 40px;
   margin-bottom: 30px;
 }
+
 main .main_wrap #about > p {
   font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+}
+main .main_wrap  #about  .addr_content {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
 }
 main .main_wrap #my_skills {
-  margin: 100px 0px 100px 0px;
+  margin: 80px 0px 80px 0px;
 }
 main .main_wrap #my_skills h2 {}
 main .main_wrap #my_skills .my_skills_ul {
   display: flex;
   justify-content:center;
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
 }
 main .main_wrap #my_skills .my_skills_ul li {
   display: contents; 
   padding: 10px; 
-  margin: 0 10px; 
+  margin: 0 10px;
 }
 main .main_wrap #my_skills .my_skills_ul li img {
   width: 30px;
@@ -105,7 +121,7 @@ main .main_wrap #my_skills .my_skills_ul li img {
   margin-right: 5px;
 }
 main .main_wrap #my_skills .my_skills_ul li p {
-  font-size: 16px;
+  font-size: 25px;
   margin-top: 10px;
   margin-right: 35px;
   font-weight: bold;
@@ -120,7 +136,7 @@ main .main_wrap #projects .swiper-wrapper {
 }
 main .main_wrap #projects .swiper-wrapper .swiper-slide {
   font-size: 20px;
-  padding: 0px 10px 0px 10px;
+  padding: 20px 10px 20px 10px;
 }
 /* 이미지 클릭 시 포트폴리오 새 창 링크 */
 main .main_wrap #projects .swiper-wrapper .swiper-slide a {}
@@ -189,7 +205,6 @@ footer .addr h1 {
   border-bottom: 1px solid #000;
 }
 footer .addr > .addr_content {}
-footer .addr > .addr_content .addr_title {}
 footer .addr a {}
 footer .addr a .addr_content {}
 footer .addr a .addr_content .addr_title {}
