@@ -16,7 +16,7 @@
   font-weight: bold;
 }
 .start_wrap .year_title {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
 }
 .start_wrap h1 {
@@ -170,9 +170,11 @@ main .main_wrap #projects .swiper-wrapper .swiper-slide .view:hover {
 /* prev, next */
 main .main_wrap #projects .swiper-button-prev {
   position: absolute; color: #000;
+  top: 265px;
 }
 main .main_wrap #projects .swiper-button-next {
   position: absolute; color: #000;
+  top: 265px;
 }
 main .main_wrap #projects .swiper-button-prev:hover {color: darkgreen;}
 main .main_wrap #projects .swiper-button-next:hover{color: darkgreen;}
@@ -180,7 +182,7 @@ main .main_wrap #projects .swiper-button-next:hover{color: darkgreen;}
 footer {
   background: #114232;
   display: flex;
-  padding: 0px 30px 0px 30px;
+  padding: 0px 30px 30px 30px;
 }
 footer .mail {
   padding: 0 40px;
@@ -199,6 +201,7 @@ footer .mail a img {
   height: 25px;
 }
 footer .mail #mailFrm {
+  text-align: center;
 }
 footer .mail #mailFrm input {
   background: #fff;
