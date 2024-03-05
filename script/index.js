@@ -42,16 +42,31 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 
+/* 작업중 부분 클릭 시  */
+/* document.getElementsByClassName('view').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    show_alert(); 
+}); */
 
-/* 주소 */
-/* 기획 페이지 팝업으로 나오게 만들기  */
+function show_alert() {
+    alert("준비중입니다.");
+    event.preventDefault(); 
+}
+/* function send_alert() {
+    alert("전송완료");
+    event.preventDefault(); 
+}
 
+ */
+/* 실험용 */
+document.getElementById('sendbtn').addEventListener('submit', function(event) {
+    var name = document.getElementById('floatingInputValue').value;
+    var email = document.getElementById('floatingInputValue').value;
+    var message = document.getElementById('floatingInputValue').value;
 
-
-/* const button 변수 만들기 */ 
-
-/* button.addEventListener("click", ()=>{
-    window.open("coin_charging_page.html", "popup", "width=699,height=1377")
-}) */
-
-/* 결과는 a에 링크줘서  */
+    if (!name || !email || !message) {
+        // 필수 입력 필드가 비어있을 경우 폼 제출을 중단하고 경고창을 띄움
+        event.preventDefault();
+        alert("모든 필수 항목을 입력해주세요.");
+    }
+});
