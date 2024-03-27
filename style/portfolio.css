@@ -1,6 +1,30 @@
 * {
   font-family: 'Spoqa Han Sans Neo', 'sans-serif';
 }
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #87a922;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scroll-to-top:hover {
+  background-color: #114232;
+}
+#scroll-to-top span {
+  font-size: 12px;
+}
 /* intro 첫번째 영역 */
 .start_wrap {
   background:#f7f9fb url(../images/img1_2.jpg) no-repeat center;

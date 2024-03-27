@@ -1,5 +1,10 @@
 /* 계획 웨이브 메인 배너처럼 중앙에 보이게 */
 
+/* 위로가기 */
+function scrollToTop() {
+    document.querySelector('.main_wrap').scrollIntoView({ behavior: 'smooth' });
+}
+
 /* 상단 메인 슬라이드 */
 const my_swiper = new Swiper('#projects', { 
     /* autoplay:{delay:3000}, */
