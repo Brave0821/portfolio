@@ -180,14 +180,17 @@ main .main_wrap #projects .swiper-wrapper .swiper-slide {
 /* 이미지 클릭 시 포트폴리오 새 창 링크 */
 main .main_wrap #projects .swiper-wrapper .swiper-slide .photo {
   border:2px solid #114232; display:inline-block;
-  width:100%; height:350px; overflow:hidden;
+  width:100%; height:300px; overflow:hidden;
   background:url(../images/project_Preparing800.png) center;
   background-size:cover;
 }
 main .main_wrap #projects .swiper-wrapper .swiper-slide .photo:hover {
   filter:brightness(110%)
 }
-main .main_wrap #projects .swiper-wrapper .swiper-slide .photo img {width:100%;}
+main .main_wrap #projects .swiper-wrapper .swiper-slide .photo img {
+  width:100%;
+  height: 100%;
+}
 main .main_wrap #projects .swiper-wrapper .swiper-slide h3 {
   font-size:1.5rem; padding-top:10px;
 }

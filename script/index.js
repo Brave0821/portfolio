@@ -8,7 +8,7 @@ function scrollToTop() {
 /* 상단 메인 슬라이드 */
 const my_swiper = new Swiper('#projects', { 
     /* autoplay:{delay:3000}, */
-    slidesPerView: 2, //슬라이드 한번에 1개씩 보이기
+    slidesPerView: 3, //슬라이드 한번에 1개씩 보이기
     spaceBetween:0, // 슬라이드 여백
     /* centeredSlides:true, */ // 슬라이드의 기준을 가운데부터 시작하도록 설정하기
     loop:true,
