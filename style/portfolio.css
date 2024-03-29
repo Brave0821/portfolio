@@ -180,7 +180,7 @@ main .main_wrap #projects .swiper-wrapper .swiper-slide {
 /* 이미지 클릭 시 포트폴리오 새 창 링크 */
 main .main_wrap #projects .swiper-wrapper .swiper-slide .photo {
   border:2px solid #114232; display:inline-block;
-  width:100%; height:300px; overflow:hidden;
+  width:100%; height: 270px; overflow:hidden;
   background:url(../images/project_Preparing800.png) center;
   background-size:cover;
 }
@@ -294,3 +294,20 @@ footer .addr a .addr_content .addr_title {}
 
 /* 실험중 */
 
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #4caf50; /* Default green color */
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-label {
+  margin-right: 10px; /* 라벨과 바 사이의 간격을 설정합니다. */
+}

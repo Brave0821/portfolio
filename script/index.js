@@ -42,6 +42,26 @@ mail_inquire.addEventListener("click",()=>{
     is_visible = !is_visible; //상태변경
 }); 
 
+/* 진행도 관련 */
+function updateProgress(percentage) {
+    const progressBar = document.getElementById('progress');
+    const newWidth = Math.min(100, Math.max(0, percentage)) + '%';
+    progressBar.style.width = newWidth;
+    
+    /* 50%미만이면 #f44336 그 이상이면 #4caf50  */
+    if (percentage < 50) {
+      progressBar.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
+    } else {
+      progressBar.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
+    }
+  }
+  
+  // Example usage:
+  updateProgress(60); // Update the progress to 70%
+
+
+
+
 /* 부트스트랩 툴팁 */
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
