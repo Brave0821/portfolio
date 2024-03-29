@@ -295,10 +295,12 @@ footer .addr a .addr_content .addr_title {}
 /* 실험중 */
 
 .progress-bar {
-  width: 100%;
+  width: calc(100% - 100px); /* 100px는 라벨의 폭을 고려하여 조절합니다. */
   height: 20px;
   background-color: #f0f0f0;
   border-radius: 10px;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 .progress {
@@ -306,8 +308,11 @@ footer .addr a .addr_content .addr_title {}
   border-radius: 10px;
   background-color: #4caf50; /* Default green color */
   transition: width 0.5s ease-in-out;
+/*   display: inline-block; */
 }
 
-.progress-label {
-  margin-right: 10px; /* 라벨과 바 사이의 간격을 설정합니다. */
+#progress-label {
+  float: left;
+  margin-right: 10px; /* 라벨과 막대 사이의 간격 조절 */
+  margin-top: 10px;
 }
