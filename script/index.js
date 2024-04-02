@@ -42,22 +42,70 @@ mail_inquire.addEventListener("click",()=>{
     is_visible = !is_visible; //상태변경
 }); 
 
-/* 진행도 관련 */
-function updateProgress(percentage) {
-    const progressBar = document.getElementById('progress');
-    const newWidth = Math.min(100, Math.max(0, percentage)) + '%';
-    progressBar.style.width = newWidth;
+/* 진행도 관련 wavve*/
+function updateProgress_wavve(percentage) {
+    const progressBar_wavve = document.getElementById('progress_wavve');
+    const newWidth_wavve = Math.min(100, Math.max(0, percentage)) + '%';
+    progressBar_wavve.style.width = newWidth_wavve;
     
     /* 50%미만이면 #f44336 그 이상이면 #4caf50  */
     if (percentage < 50) {
-      progressBar.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
+        progressBar_wavve.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
     } else {
-      progressBar.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
+        progressBar_wavve.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
     }
   }
   
   // Example usage:
-  updateProgress(60); // Update the progress to 70%
+  updateProgress_wavve(100); // Update the progress to 70%
+
+/* 진행도 관련 비렌스 virens */
+
+function updateProgress_virens(percentage) {
+    const progressBar_virens = document.getElementById('progress_virens');
+    const newWidth_virens = Math.min(100, Math.max(0, percentage)) + '%';
+    progressBar_virens.style.width = newWidth_virens;
+    
+    /* 50%미만이면 #f44336 그 이상이면 #4caf50  */
+    if (percentage < 50) {
+        progressBar_virens.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
+    } else {
+        progressBar_virens.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
+    }
+  }
+  updateProgress_virens(100);
+
+/* 진행도 미술관 */
+
+function updateProgress_art(percentage) {
+    const progressBar_art = document.getElementById('progress_art');
+    const newWidth_art = Math.min(100, Math.max(0, percentage)) + '%';
+    progressBar_art.style.width = newWidth_art;
+    
+    /* 50%미만이면 #f44336 그 이상이면 #4caf50  */
+    if (percentage < 50) {
+        progressBar_art.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
+    } else {
+        progressBar_art.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
+    }
+  }
+  updateProgress_art(60);
+
+/* 진행도 call 백엔드 프로젝트 */
+
+function updateProgress_call(percentage) {
+    const progressBar_call = document.getElementById('progress_call');
+    const newWidth_call = Math.min(100, Math.max(0, percentage)) + '%';
+    progressBar_call.style.width = newWidth_call;
+    
+    /* 50%미만이면 #f44336 그 이상이면 #4caf50  */
+    if (percentage < 50) {
+        progressBar_call.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
+    } else {
+        progressBar_call.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
+    }
+  }
+  updateProgress_call(100);
 
 
 
