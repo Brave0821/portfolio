@@ -107,6 +107,22 @@ function updateProgress_call(percentage) {
   }
   updateProgress_call(100);
 
+/* 진행도 스타벅스 프로젝트 */
+
+function updateProgress_star(percentage) {
+    const progressBar_star = document.getElementById('progress_star');
+    const newWidth_star = Math.min(100, Math.max(0, percentage)) + '%';
+    progressBar_star.style.width = newWidth_star;
+    
+    /* 50%미만이면 #f44336 그 이상이면 #4caf50  */
+    if (percentage < 50) {
+        progressBar_star.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
+    } else {
+        progressBar_star.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
+    }
+  }
+  updateProgress_star(20);
+
 
 
 
