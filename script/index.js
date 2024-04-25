@@ -18,8 +18,26 @@ const my_swiper = new Swiper('#projects', {
     navigation:{
         nextEl:'#projects .swiper-button-next',
         prevEl:'#projects .swiper-button-prev',
-    },    
-})
+    },
+    breakpoints: {
+        // 768 이상에만 적용
+        1025: {
+        slidesPerView: 3,
+/*         spaceBetween: 40 */
+        },
+        768: {
+        slidesPerView: 2,
+/*         spaceBetween: 40 */
+        },
+
+        480: {
+            slidesPerView: 1,
+        }
+
+}})
+
+
+
 
 /* 스크롤 버튼 */
 

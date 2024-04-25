@@ -50,6 +50,15 @@
     footer .mail #mailFrm {
         text-align: center;
     }
+/* 3 4(넓은화면x) 5넓은화면x  11넓 괜찮은데?? 13? 15 16*/
+    .start_wrap {
+        background:#f7f9fb url(/images/background_img/img4.jpg) no-repeat center;
+/*         background-size:cover;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        padding: 18.4% 0 0 0; */
+      }
 }
 
 
@@ -57,6 +66,16 @@
 
 
 @media screen and (max-width:768px) {
+
+    .start_wrap {
+        background:#f7f9fb url(/images/background_img/img4.jpg) no-repeat center;
+ /*        background-size:cover;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        padding: 18.4% 0 0 0; */
+      }
+      
     .start_wrap .year_title {
         font-size: 1.25rem;
     }
@@ -109,3 +128,12 @@
         text-align: center;
     }
 } 
+
+
+@media screen and (max-width: 768px), (max-width: 1240px) {
+    /* Your CSS rules here */
+ /*    .start_wrap {
+      background: #f7f9fb url(../images/img1.jpg) no-repeat center;
+    } */
+    /* Additional CSS rules for smaller screens */
+  }
