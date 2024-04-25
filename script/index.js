@@ -32,6 +32,10 @@ const my_swiper = new Swiper('#projects', {
 
         480: {
             slidesPerView: 1,
+        },
+
+        200: {
+            slidesPerView: 1,
         }
 
 }})

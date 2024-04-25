@@ -130,10 +130,3 @@
 } 
 
 
-@media screen and (max-width: 768px), (max-width: 1240px) {
-    /* Your CSS rules here */
- /*    .start_wrap {
-      background: #f7f9fb url(../images/img1.jpg) no-repeat center;
-    } */
-    /* Additional CSS rules for smaller screens */
-  }
