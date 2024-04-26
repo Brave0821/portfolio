@@ -1,3 +1,20 @@
+/* 메인 wrap 스크롤 내릴 시 nav faixed */
+window.addEventListener('scroll', function() {
+    var nav = document.querySelector('header');
+    var main = document.querySelector('main');
+    
+    if (window.scrollY > main.offsetTop) {
+        nav.style.position = 'fixed';
+        nav.style.top = '0';
+        nav.style.width = '100%';
+        nav.style.backgroundColor = '#114232';
+        nav.style.zIndex = '1000';
+    } else {
+        nav.style.position = 'relative';
+        nav.style.backgroundColor = ''; // 이전의 스타일로 복원하려면 이전의 스타일을 지정하세요
+    }
+});
+
 /* 계획 웨이브 메인 배너처럼 중앙에 보이게 */
 
 /* 위로가기 */

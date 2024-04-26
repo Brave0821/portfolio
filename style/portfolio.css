@@ -72,7 +72,9 @@ header {
   padding: 35px;
   text-align: center;
 }
-header nav {}
+header nav {
+  
+}
 header nav ul {
   display: flex;
   justify-content: center;
@@ -144,7 +146,10 @@ main .main_wrap  #about .profile .info .addr_content {
 }
 main .main_wrap #about .profile .info .addr_content .addr_title {}
 main .main_wrap #about .profile .info a {}
-main .main_wrap #about .profile .info a .addr_content {}
+/* 부트스트랩 적용을 위해 넓이 제한 - > 클릭 시 git로 이동합니다. */
+main .main_wrap #about .profile .info a .addr_content {
+  width: 280px;
+}
 main .main_wrap #my_skills {
   margin: 80px 0px 80px 0px;
 }
