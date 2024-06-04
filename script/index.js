@@ -160,7 +160,7 @@ function updateProgress_star(percentage) {
         progressBar_star.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
     }
   }
-  updateProgress_star(80);
+  updateProgress_star(90);
 
 
 
