@@ -1,0 +1,145 @@
+@media screen and (max-width:1240px) {
+    .start_wrap .year_title {
+        font-size: 1.25rem;
+    }
+    
+    .start_wrap h1 {
+        font-size: 3.75rem;
+    }
+
+    .start_wrap .info{
+        font-size: 1rem
+    }
+    main .main_wrap #about .profile .photo img {
+        width: 250%;
+        margin-top: 25px;
+    }
+    main .main_wrap #about .profile {
+        flex-direction: column;
+    }
+
+    main .main_wrap #about .profile .info {
+        margin-top: 0px;
+    }
+    main .main_wrap #my_skills .my_skills_ul {
+        flex-wrap: wrap;
+    }
+    main .main_wrap #projects .swiper-wrapper .swiper-slide .photo {
+    width: 100%;
+    height: 260px;
+    }
+    main .main_wrap #projects .swiper-wrapper .swiper-slide .photo img {}
+    main .main_wrap #projects .swiper-wrapper .swiper-slide h3 {
+        font-size: 1.25rem
+    }
+    main .main_wrap #projects .swiper-wrapper .swiper-slide p {
+        font-size: 1rem;
+    }
+    main .main_wrap #projects .swiper-wrapper .swiper-slide .view {
+        padding: 7px 15px
+    }
+
+    main .main_wrap #projects .swiper-button-prev {
+        position: absolute; color: #000;
+        top: 225px;
+    }
+    main .main_wrap #projects .swiper-button-next {
+        position: absolute; color: #000;
+        top: 225px;
+    }
+    footer .mail #mailFrm {
+        text-align: center;
+    }
+/* 3 4(넓은화면x) 5넓은화면x  11넓 괜찮은데?? 13? 15 16*/
+    .start_wrap {
+        background:#f7f9fb url(/images/background_img/img4.jpg) no-repeat center;
+/*         background-size:cover;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        padding: 18.4% 0 0 0; */
+      }
+}
+
+
+
+
+
+@media screen and (max-width:768px) {
+
+    .start_wrap {
+        background:#f7f9fb url(/images/background_img/img4.jpg) no-repeat center;
+ /*        background-size:cover;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        padding: 18.4% 0 0 0; */
+      }
+      
+    .start_wrap .year_title {
+        font-size: 1.25rem;
+    }
+    
+    .start_wrap h1 {
+        font-size: 3.75rem;
+    }
+
+    .start_wrap .info{
+        font-size: 1rem
+    }
+
+ 
+    main .main_wrap #about .profile .photo img {
+        width: 250%;
+        margin-top: 25 px;
+    }
+    main .main_wrap #about .profile {
+        flex-direction: column;
+    }
+
+    main .main_wrap #about .profile .info {
+        margin-top: 0px;
+    }
+    main .main_wrap #my_skills .my_skills_ul {
+        flex-wrap: wrap;
+    }
+    main .main_wrap #projects .swiper-wrapper .swiper-slide .photo {
+    width: 100%;
+    height: 260px;
+    }
+    main .main_wrap #projects .swiper-wrapper .swiper-slide .photo img {}
+    main .main_wrap #projects .swiper-wrapper .swiper-slide h3 {
+        font-size: 1.25rem
+    }
+    main .main_wrap #projects .swiper-wrapper .swiper-slide p {
+        font-size: 1rem;
+    }
+    main .main_wrap #projects .swiper-wrapper .swiper-slide .view {
+        padding: 7px 15px
+    }
+
+    main .main_wrap #projects .swiper-button-prev {
+        position: absolute; color: #000;
+        top: 225px;
+    }
+    main .main_wrap #projects .swiper-button-next {
+        position: absolute; color: #000;
+        top: 225px;
+    }
+    footer .mail #mailFrm {
+        text-align: center;
+    }
+} 
+
+@media screen and (max-width:553px) {
+
+    header nav ul li a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:477px) {
+    header nav ul li a {
+        font-size: 15px;
+    }
+}

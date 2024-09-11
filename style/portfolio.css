@@ -1,0 +1,334 @@
+* {
+/*   font-family: 'Spoqa Han Sans Neo', 'sans-serif'; */
+
+  font-family: "Noto Sans KR", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  overflow-x: hidden; /* 가로 스크롤바를 숨깁니다. */
+
+}
+
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #87a922;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scroll-to-top:hover {
+  background-color: #114232;
+}
+#scroll-to-top span {
+  font-size: 12px;
+}
+/* intro 첫번째 영역 */
+.start_wrap {
+  background:#f7f9fb url(../images/background_img/img1_2.jpg) no-repeat center;
+ /*  background:#f7f9fb url(/images/background_img/img16.jpg) no-repeat center; */
+  background-size:cover;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding: 18.4% 0 0 0;
+}
+.start_wrap p {
+  color: #a1a1a1;
+  font-size: 20px;
+  font-weight: bold;
+}
+.start_wrap .year_title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.start_wrap h1 {
+  color: #87A922;
+  font-size: 5rem;
+  line-height: 1.7;
+  font-weight: bold;
+}
+.start_wrap .info {
+  margin-bottom: 20px;
+  color:#114232;
+  font-size:2rem;
+}
+/* header */
+header {
+  background-color: #114232;
+  color: #fff;
+  padding: 35px;
+  text-align: center;
+}
+header nav {
+  
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+}
+/* 소개 기술능력 */
+header nav ul li {margin-right: 27px;}
+header nav ul li a {
+  font-size: 27px;
+  font-weight: bold;
+  padding: 0px 30px;
+  color: #fff;
+}
+nav ul li a:hover {color: darkgreen}
+/* main 프로필 페이지 */
+main {}
+main .main_wrap {
+  margin: 0 auto;
+  max-width: 100%;
+  background: #FAFAFA;
+}
+/* 공통 section */
+main .main_wrap > section {
+  padding: 0 60px;
+}
+
+main .main_wrap > section h2 {
+  font-weight: bold;
+  font-size: 25px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+}
+/* section 개별 이름 about > my_skills > project(swiper-container) 순서 */
+main .main_wrap #about {
+  padding-top:40px;
+}
+main .main_wrap #about h2 {
+  padding-bottom: 30px;
+  font-size: 27px;
+}
+main .main_wrap #about .profile {
+  font-size: 25px;
+  margin-bottom: 20px;
+  display:flex;
+}
+
+main .main_wrap #about .profile .photo {
+  width: 20%; margin: 40px 20px 30px 0;
+}
+main .main_wrap #about .profile .photo img {width:100%;}
+main .main_wrap #about .profile .info {
+  padding-top: 28px;
+}
+main .main_wrap #about .profile .info .main_title {}
+main .main_wrap #about .profile .info p {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+  line-height:1.7;
+}
+
+main .main_wrap #about .profile .info p:last-child {
+
+}
+
+main .main_wrap  #about .profile .info .addr_content {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5px;
+}
+main .main_wrap #about .profile .info .addr_content .addr_title {}
+main .main_wrap #about .profile .info a {}
+/* 부트스트랩 적용을 위해 넓이 제한 - > 클릭 시 git로 이동합니다. */
+main .main_wrap #about .profile .info a .addr_content {
+  width: 280px;
+}
+main .main_wrap #my_skills {
+  margin: 80px 0px 80px 0px;
+}
+main .main_wrap #my_skills h2 {}
+/* 111 */
+main .main_wrap #my_skills .my_skills_ul {
+  display: flex;
+  justify-content:center;
+  margin-top: 50px;
+  text-align: center;
+}
+main .main_wrap #my_skills .my_skills_ul li {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin: 0 10px;
+}
+main .main_wrap #my_skills .my_skills_ul li img {
+  width: 50px; height: auto;
+  transition: transform 0.3s ease;
+}
+main .main_wrap #my_skills .my_skills_ul li img:hover{
+  transform: scale(1.1); 
+  transform-origin: 50% 50%;
+}
+main .main_wrap #my_skills .my_skills_ul li p {
+  font-size: 16px; padding-top:10px;
+}
+main .main_wrap #projects {
+  position: relative;
+}
+main .main_wrap #projects h2 {}
+main .main_wrap #projects .swiper-wrapper {
+  text-align: center;
+  padding: 30px 0px 30px 0px;
+}
+main .main_wrap #projects .swiper-wrapper .swiper-slide {
+  font-size: 20px;
+  padding: 20px 10px 20px 10px;
+}
+/* 이미지 클릭 시 포트폴리오 새 창 링크 */
+main .main_wrap #projects .swiper-wrapper .swiper-slide .photo {
+  border:2px solid #114232; display:inline-block;
+  width:100%; height: 270px; overflow:hidden;
+  background:url(../images/project_Preparing800.png) center;
+  background-size:cover;
+}
+main .main_wrap #projects .swiper-wrapper .swiper-slide .photo:hover {
+  filter:brightness(110%)
+}
+main .main_wrap #projects .swiper-wrapper .swiper-slide .photo img {
+  width:100%;
+  height: 100%;
+}
+main .main_wrap #projects .swiper-wrapper .swiper-slide h3 {
+  font-size:1.5rem; padding-top:10px;
+}
+main .main_wrap #projects .swiper-wrapper .swiper-slide p {
+  font-size: 20px; margin-top:10px;
+}
+/* 기획페이지 새 창 링크 */
+main .main_wrap #projects .swiper-wrapper .swiper-slide .view {
+  margin-top:20px;
+  background:#87A922; border-radius:2px;
+  padding:10px 20px; display:inline-block; color:#fff;
+}
+main .main_wrap #projects .swiper-wrapper .swiper-slide .view:hover {
+  background:#114232;
+}
+/* prev, next */
+main .main_wrap #projects .swiper-button-prev {
+  position: absolute; color: #000;
+  top: 265px;
+}
+main .main_wrap #projects .swiper-button-next {
+  position: absolute; color: #000;
+  top: 265px;
+}
+main .main_wrap #projects .swiper-button-prev:hover {color: darkgreen;}
+main .main_wrap #projects .swiper-button-next:hover{color: darkgreen;}
+/* footer */
+footer {
+  background: #114232;
+  display: flex;
+  padding: 0px 30px 30px 30px;
+}
+footer .mail {
+  padding: 0 40px;
+  margin-top: 30px;
+  width: 1200px;
+  margin: 0 auto;
+}
+footer .mail a {}
+footer .mail a h1 {
+  font-size: 25px; color:#fff;
+  padding: 20px 0px 20px 0px;
+}
+footer .mail a img {
+  padding-left: 5px;
+  width: 25px;
+  height: 25px;
+}
+footer .mail #mailFrm {
+  text-align: center;
+}
+footer .mail #mailFrm input {
+  background: #fff;
+  width: 100%;
+  height: 47px;
+  border-radius: 5px;
+  margin: 20px 0px 20px 0px;
+  display: block;
+  padding: 0px 0px 5px 10px;
+}
+footer .mail #mailFrm input[type=text] {}
+footer .mail #mailFrm input[type=email] {}
+footer .mail #mailFrm textarea {
+  margin-bottom: 20px;
+  width: 100%; height:200px;
+  border-radius: 5px;
+  padding: 12px 0px 0px 10px;
+}
+footer .mail #mailFrm #sendbtn {
+  color: #605f67;
+  background:#fff; width:50%;
+}
+footer .addr {margin-left: 70px;}
+footer .addr h1 {
+  font-size: 25px;
+  padding: 50px 0px 20px 0px;
+  border-bottom: 1px solid #000;
+}
+footer .addr > .addr_content {}
+footer .addr a {}
+footer .addr a .addr_content {}
+footer .addr a .addr_content .addr_title {}
+/* --------------------------------------------- */
+/* 각 섹션이 스크롤될 때 페이드인 효과 적용 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 각 섹션에 애니메이션 적용 */
+.start_wrap {
+  animation: fadeIn 1s ease 0.5s both;
+}
+
+
+/* 실험중 */
+
+.progress-bar {
+  width: calc(100% - 100px); /* 100px는 라벨의 폭을 고려하여 조절합니다. */
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #4caf50; /* Default green color */
+  transition: width 0.5s ease-in-out;
+/*   display: inline-block; */
+}
+
+#progress-label {
+  float: left;
+  margin-right: 10px; /* 라벨과 막대 사이의 간격 조절 */
+  margin-top: 10px;
+}
