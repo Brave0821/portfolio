@@ -17,7 +17,9 @@ window.addEventListener('scroll', function() {
 
 /* 계획 웨이브 메인 배너처럼 중앙에 보이게 */
 
-/* 위로가기 */
+/* 위로가기 버튼 (중간에 스와이프 부분에서 뒤로가는데 수정중
+요구사항은 스와이프 부분에서 아에 안보이고 메일 문의에서 다시 나타날 수 있게 만들기.
+) */
 function scrollToTop() {
     document.querySelector('.main_wrap').scrollIntoView({ behavior: 'smooth' });
 }
@@ -59,7 +61,6 @@ const my_swiper = new Swiper('#projects', {
 
 
 
-
 /* 스크롤 버튼 */
 
 /* 메일문의  */
@@ -80,6 +81,45 @@ mail_inquire.addEventListener("click",()=>{
     }
     is_visible = !is_visible; //상태변경
 }); 
+
+
+/* 테스트 진행중 0222 */
+// 버튼 요소 선택
+const scrollToTopButton = document.querySelector('.scroll-to-top');
+
+// Intersection Observer 설정
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // 슬라이더가 뷰포트에 들어오면 버튼 숨기기
+            scrollToTopButton.style.display = 'none';
+        } else {
+            // 슬라이더가 뷰포트를 벗어나면 버튼 보이기
+            scrollToTopButton.style.display = 'block';
+        }
+    });
+});
+
+// 슬라이더 요소 감시
+const slider = document.querySelector('#projects');
+observer.observe(slider);
+
+// 메일 문의 섹션 감시
+const mailSection = document.querySelector('.mail');
+const mailObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // 메일 문의 섹션이 뷰포트에 들어오면 버튼 보이기
+            scrollToTopButton.style.display = 'block';
+        }
+    });
+});
+
+// 메일 문의 섹션 감시
+mailObserver.observe(mailSection);
+
+
+/* 테스트 진행중 0222 */
 
 /* 진행도 관련 wavve*/
 function updateProgress_wavve(percentage) {
