@@ -126,6 +126,7 @@ main .main_wrap #about .profile .photo {
 main .main_wrap #about .profile .photo img {width:100%;}
 main .main_wrap #about .profile .info {
   padding-top: 28px;
+  padding-left: 10px;
 }
 main .main_wrap #about .profile .info .main_title {}
 main .main_wrap #about .profile .info p {
