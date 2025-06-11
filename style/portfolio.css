@@ -158,6 +158,7 @@ main .main_wrap #my_skills h2 {}
 /* 111 */
 main .main_wrap #my_skills .my_skills_ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content:center;
   margin-top: 50px;
   text-align: center;
