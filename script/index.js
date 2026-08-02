@@ -15,21 +15,15 @@ window.addEventListener('scroll', function() {
     }
 });
 
-/* 계획 웨이브 메인 배너처럼 중앙에 보이게 */
-
-/* 위로가기 버튼 (중간에 스와이프 부분에서 뒤로가는데 수정중
-요구사항은 스와이프 부분에서 아에 안보이고 메일 문의에서 다시 나타날 수 있게 만들기.
-) */
+/* 위로가기 버튼 */
 function scrollToTop() {
     document.querySelector('.main_wrap').scrollIntoView({ behavior: 'smooth' });
 }
 
-/* 상단 메인 슬라이드 */
+/* 상단 메인 슬라이드 (웹 프로젝트) */
 const my_swiper = new Swiper('#projects', { 
-    /* autoplay:{delay:3000}, */
-    slidesPerView: 3, //슬라이드 한번에 1개씩 보이기
-    spaceBetween:0, // 슬라이드 여백
-    /* centeredSlides:true, */ // 슬라이드의 기준을 가운데부터 시작하도록 설정하기
+    slidesPerView: 3, 
+    spaceBetween:0, 
     loop:true,
     pagination:{
         el:'.swiper-pagination'
@@ -39,38 +33,40 @@ const my_swiper = new Swiper('#projects', {
         prevEl:'#projects .swiper-button-prev',
     },
     breakpoints: {
-        // 768 이상에만 적용
-        1025: {
-        slidesPerView: 3,
-/*         spaceBetween: 40 */
-        },
-        768: {
-        slidesPerView: 2,
-/*         spaceBetween: 40 */
-        },
+        1025: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
+        480: { slidesPerView: 1 },
+        200: { slidesPerView: 1 }
+    }
+});
 
-        480: {
-            slidesPerView: 1,
-        },
+/* QA 검수 및 문서 관리 슬라이드 (새로 추가된 슬라이더) */
+const qa_swiper = new Swiper('#qa_projects', { 
+    slidesPerView: 3, 
+    spaceBetween: 0, 
+    loop: false, // 문서 자료는 보통 개수가 적으므로 반복(loop)을 false로 두는 것이 깔끔합니다.
+    pagination:{
+        el:'.swiper-pagination'
+    },
+    navigation:{
+        nextEl:'#qa_projects .swiper-button-next',
+        prevEl:'#qa_projects .swiper-button-prev',
+    },
+    breakpoints: {
+        1025: { slidesPerView: 3 },
+        768: { slidesPerView: 2 },
+        480: { slidesPerView: 1 },
+        200: { slidesPerView: 1 }
+    }
+});
 
-        200: {
-            slidesPerView: 1,
-        }
-
-}})
-
-
-
-/* 스크롤 버튼 */
 
 /* 메일문의  */
 const mail_inquire = document.querySelector(".mail a")
 const mail_contents = document.querySelector(".mail form")
 let is_visible = false;
-console.log(mail_inquire, mail_contents)
 
-
-mail_inquire.addEventListener("click",()=>{
+mail_inquire.addEventListener("click",(event)=>{
     event.preventDefault(); // 기본 동작 방지
     if (is_visible) {
         mail_contents.style.display = "none"// 클릭 시 숨기기
@@ -83,11 +79,9 @@ mail_inquire.addEventListener("click",()=>{
 }); 
 
 
-/* 테스트 진행중 0222 */
-// 버튼 요소 선택
-const scrollToTopButton = document.querySelector('.scroll-to-top');
+/* 스크롤 버튼 감시 설정 */
+const scrollToTopButton = document.querySelector('.scroll-to-top') || document.querySelector('#scroll-to-top');
 
-// Intersection Observer 설정
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -100,9 +94,13 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-// 슬라이더 요소 감시
+// 기존 웹 프로젝트 슬라이더 감시
 const slider = document.querySelector('#projects');
-observer.observe(slider);
+if(slider) observer.observe(slider);
+
+// 새로 추가된 QA 슬라이더 감시 (추가됨)
+const qa_slider = document.querySelector('#qa_projects');
+if(qa_slider) observer.observe(qa_slider);
 
 // 메일 문의 섹션 감시
 const mailSection = document.querySelector('.mail');
@@ -114,126 +112,102 @@ const mailObserver = new IntersectionObserver((entries) => {
         }
     });
 });
-
-// 메일 문의 섹션 감시
-mailObserver.observe(mailSection);
+if(mailSection) mailObserver.observe(mailSection);
 
 
-/* 테스트 진행중 0222 */
-
-/* 진행도 관련 wavve*/
+/* 진행도 관련 함수들 */
 function updateProgress_wavve(percentage) {
     const progressBar_wavve = document.getElementById('progress_wavve');
+    if(!progressBar_wavve) return;
     const newWidth_wavve = Math.min(100, Math.max(0, percentage)) + '%';
     progressBar_wavve.style.width = newWidth_wavve;
     
-    /* 50%미만이면 #f44336 그 이상이면 #4caf50  */
     if (percentage < 50) {
-        progressBar_wavve.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
+        progressBar_wavve.style.backgroundColor = '#f44336'; 
     } else {
-        progressBar_wavve.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
+        progressBar_wavve.style.backgroundColor = '#4caf50'; 
     }
-  }
-  
-  // Example usage:
-  updateProgress_wavve(100); // Update the progress to 70%
-
-/* 진행도 관련 비렌스 virens */
+}
+updateProgress_wavve(100); 
 
 function updateProgress_virens(percentage) {
     const progressBar_virens = document.getElementById('progress_virens');
+    if(!progressBar_virens) return;
     const newWidth_virens = Math.min(100, Math.max(0, percentage)) + '%';
     progressBar_virens.style.width = newWidth_virens;
     
-    /* 50%미만이면 #f44336 그 이상이면 #4caf50  */
     if (percentage < 50) {
-        progressBar_virens.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
+        progressBar_virens.style.backgroundColor = '#f44336'; 
     } else {
-        progressBar_virens.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
+        progressBar_virens.style.backgroundColor = '#4caf50'; 
     }
-  }
-  updateProgress_virens(100);
-
-/* 진행도 미술관 */
+}
+updateProgress_virens(100);
 
 function updateProgress_art(percentage) {
     const progressBar_art = document.getElementById('progress_art');
+    if(!progressBar_art) return;
     const newWidth_art = Math.min(100, Math.max(0, percentage)) + '%';
     progressBar_art.style.width = newWidth_art;
     
-    /* 50%미만이면 #f44336 그 이상이면 #4caf50  */
     if (percentage < 50) {
-        progressBar_art.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
+        progressBar_art.style.backgroundColor = '#f44336'; 
     } else {
-        progressBar_art.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
+        progressBar_art.style.backgroundColor = '#4caf50'; 
     }
-  }
-  updateProgress_art(60);
-
-/* 진행도 call 백엔드 프로젝트 */
+}
+updateProgress_art(60);
 
 function updateProgress_call(percentage) {
     const progressBar_call = document.getElementById('progress_call');
+    if(!progressBar_call) return;
     const newWidth_call = Math.min(100, Math.max(0, percentage)) + '%';
     progressBar_call.style.width = newWidth_call;
     
-    /* 50%미만이면 #f44336 그 이상이면 #4caf50  */
     if (percentage < 50) {
-        progressBar_call.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
+        progressBar_call.style.backgroundColor = '#f44336'; 
     } else {
-        progressBar_call.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
+        progressBar_call.style.backgroundColor = '#4caf50'; 
     }
-  }
-  updateProgress_call(100);
-
-/* 진행도 스타벅스 프로젝트 */
+}
+updateProgress_call(100);
 
 function updateProgress_star(percentage) {
     const progressBar_star = document.getElementById('progress_star');
+    if(!progressBar_star) return;
     const newWidth_star = Math.min(100, Math.max(0, percentage)) + '%';
     progressBar_star.style.width = newWidth_star;
     
-    /* 50%미만이면 #f44336 그 이상이면 #4caf50  */
     if (percentage < 50) {
-        progressBar_star.style.backgroundColor = '#f44336'; // Red color for contribution below 60%
+        progressBar_star.style.backgroundColor = '#f44336'; 
     } else {
-        progressBar_star.style.backgroundColor = '#4caf50'; // Green color for contribution above or equal to 60%
+        progressBar_star.style.backgroundColor = '#4caf50'; 
     }
-  }
-  updateProgress_star(100);
-
-
+}
+updateProgress_star(100);
 
 
 /* 부트스트랩 툴팁 */
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
 
 
 /* 작업중 부분 클릭 시  */
-/* document.getElementsByClassName('view').addEventListener('click', function(event) {
-    event.preventDefault(); 
-    show_alert(); 
-}); */
-
-function show_alert() {
+function show_alert(event) {
+    if(event) event.preventDefault(); 
     alert("준비중입니다.");
-    event.preventDefault(); 
-}
-/* function send_alert() {
-    alert("전송완료");
-    event.preventDefault(); 
 }
 
- */
-/* 실험용 */
-document.getElementById('sendbtn').addEventListener('submit', function(event) {
-    var name = document.getElementById('floatingInputValue').value;
-    var email = document.getElementById('floatingInputValue').value;
-    var message = document.getElementById('floatingInputValue').value;
+
+/* 실험용 메일 폼 검증 (약간 수정됨) */
+document.getElementById('mailFrm').addEventListener('submit', function(event) {
+    // 주의: id="floatingInputValue"가 여러 요소에 중복되어 사용되고 있습니다.
+    // 폼 요소 선택을 name 속성으로 변경하여 정확히 값을 가져오게 수정했습니다.
+    var name = this.querySelector('input[name="name"]').value;
+    var email = this.querySelector('input[name="email"]').value;
+    var message = this.querySelector('textarea[name="message"]').value;
 
     if (!name || !email || !message) {
-        // 필수 입력 필드가 비어있을 경우 폼 제출을 중단하고 경고창을 띄움
         event.preventDefault();
         alert("모든 필수 항목을 입력해주세요.");
     }
