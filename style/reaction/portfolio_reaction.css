@@ -25,7 +25,6 @@ main .main_wrap #about .profile .info {
     flex: 1;
 }
 
-
 /* =========================================
    2. 태블릿 및 모바일 반응형 (미디어 쿼리)
    ========================================= */
@@ -82,9 +81,10 @@ main .main_wrap #about .profile .info {
     .start_wrap .year_title { font-size: 1rem; }
     .start_wrap .info { font-size: 1rem; }
 
+    /* 💡 수정 1: 모바일 사진 크기를 조금 더 큼직하게 (65%, 260px) */
     main .main_wrap #about .profile .photo {
-        width: 50%;
-        max-width: 200px;
+        width: 65%;
+        max-width: 260px;
         margin: 30px auto 30px auto; 
     }
 
@@ -92,6 +92,7 @@ main .main_wrap #about .profile .info {
         font-size: 15px;
         margin-top: 8px;
         line-height: 1.6;
+        word-break: break-all; /* 💡 수정 2: 긴 이메일 주소가 밑으로 툭 떨어지는 현상 방지 */
     }
     main .main_wrap #about .profile .info p strong {
         font-size: 16px;
@@ -108,13 +109,21 @@ main .main_wrap #about .profile .info {
 }
 
 @media screen and (max-width:553px) {
+    header nav ul {
+        gap: 15px; /* 메뉴 사이 간격을 살짝 조정 */
+    }
     header nav ul li a {
-        font-size: 16px;
+        font-size: 15px;
+        white-space: nowrap; /* 💡 수정 3: 메뉴 글씨가 두 줄로 깨지는 것 절대 차단! */
     }
 }
 
 @media screen and (max-width:477px) {
+    header nav ul {
+        gap: 10px;
+    }
     header nav ul li a {
         font-size: 14px;
+        white-space: nowrap; /* 여기도 깨짐 방지 유지 */
     }
 }
